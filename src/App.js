@@ -3,10 +3,7 @@ import { Welcome } from './Welcome'
 
 export class App extends React.Component {
     render() {
-        return < Welcome />  
-    }
-}
+        return < Welcome name ='Polly' age={35}/>  
 
-Welcome.defaultProps = {
-    name : 'Dear'
+    }
 }
