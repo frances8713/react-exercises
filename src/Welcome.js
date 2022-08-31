@@ -14,3 +14,4 @@ export class Welcome extends React.Component {
 }
 
 //Se in App lasciavo Polly si sarebbe visualizzato solo il <p> con Polly e non l'età perché l'ultima condizione non sarebbe stata avvalorata
+
