@@ -10,6 +10,6 @@ export class App extends React.Component {
                 < Counter initialValue = {10} incrementInterval = {500} incrementAmount = {5}/>  
             </div>
         )
-        
+       
     }
 }

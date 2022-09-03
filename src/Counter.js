@@ -2,6 +2,7 @@ import React from "react";
 import { CounterDisplay } from "./CounterDisplay";
 
 
+
 export class Counter extends React.Component {
     state = {
         count : this.props.initialValue ?? 0
@@ -22,3 +23,4 @@ export class Counter extends React.Component {
         return <CounterDisplay count = {this.state.count}/>
     }
 }
+
