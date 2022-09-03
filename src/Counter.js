@@ -8,9 +8,7 @@ export class Counter extends React.Component {
 
     }
 
-    constructor (props) {
-        super (props) 
-
+    componentDidMount () {
         setInterval (() => {
             this.setState((state) => {
                 return {
