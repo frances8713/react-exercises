@@ -18,10 +18,16 @@ export class Login extends React.Component {
             [name]: type === 'checkbox' ? checked : value,
         })
     }
-
-    //inizialmente avevo provato a mettere la condizione del disabled all'interno del onLogin ma non riuscivo a venirne a capo. Ho trovato poi questa soluzione 
     onLogin = () => {
         this.props.conditions(this.state)
+    }
+
+    handleResetButton = () => {
+        this.setState ({
+            username : '',
+            password: '',
+            remember: false
+        })
     }
 
     render () {
@@ -33,6 +39,7 @@ export class Login extends React.Component {
                 <input name = 'remember' type='checkbox' checked={this.state.remember} onChange={this.handleInputLoginChange}/>
                 <div>
                     <button type='submit' disabled={(this.state.username === '' || this.state.password === '') ? true : false} onClick={this.onLogin}>Login</button>
+                    <button onClick={this.handleResetButton}>Reset</button>
                 </div>
             </div>
 
