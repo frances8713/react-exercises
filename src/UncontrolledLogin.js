@@ -10,11 +10,8 @@ export class UncontrolledLogin extends React.Component {
         const password = event.target.elements.password.value
         const remember = event.target.elements.remember.checked
 
-        console.log({
-            username,
-            password,
-            remember
-    })
+        console.log({username, password,remember})
+        
     }
 
     render () {
