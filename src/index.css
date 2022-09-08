@@ -1,3 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Ho installato tailwind ma come aggiungo i layers segna errore*/
+
+
 .welcome {
     background-color: cadetblue;
     border: 2px solid;
