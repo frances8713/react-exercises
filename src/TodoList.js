@@ -19,7 +19,15 @@ export class TodoList extends React.Component {
         event.preventDefault()
         
         this.setState ({
-            items : [...this.state.items, this.state.addItem]
+            items : [...this.state.items, this.state.addItem],
+            addItem : ''
+        })
+    }
+
+    handleResetItems = (event) => {
+
+        this.setState ({
+            items: []
         })
     }
 
@@ -34,7 +42,8 @@ export class TodoList extends React.Component {
                 </ul>
                 <div>
                     <input value = {this.state.addItem} onChange = {this.handleInput}></input>
-                    <button onClick = {this.handleAddItems}></button>
+                    <button onClick = {this.handleAddItems}>Add Todo</button>
+                    <button onClick = {this.handleResetItems}>Reset</button>
                 </div>
             </div>
         )
