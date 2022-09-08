@@ -2,12 +2,13 @@ import React from "react";
 
 
 export class TodoList extends React.Component {
+
     state = {
         items : [
             'one', 'two', 'three', 'four'
         ],
         addItem : ''
-    }
+    } 
     
     handleInput = (event) => {
         this.setState ({
@@ -20,10 +21,22 @@ export class TodoList extends React.Component {
         
         this.setState ({
             items : [...this.state.items, this.state.addItem],
-            addItem : '' //valore vuoto
+        lists-06
+            addItem : ''
         })
     }
 
+    handleResetItems = () => {
+
+        this.setState ({
+            items: []
+        })
+    }
+
+    handleRemoveTodo = (event) => {   
+        event.target.parentElement.remove()
+
+    }
 
     render () {
 
@@ -31,11 +44,15 @@ export class TodoList extends React.Component {
             <div>
                 <h3>Todo List</h3>
                 <ul>
-                    {this.state.items.map((item) => (<li>{item}</li>))}
+                    {this.state.items.map((item, index) => (
+                    <li key={index}>{item } 
+                        <button onClick = {this.handleRemoveTodo}>Remove</button> 
+                    </li>))}
                 </ul>
                 <div>
                     <input value = {this.state.addItem} onChange = {this.handleInput}></input>
-                    <button onClick = {this.handleAddItems}></button>
+                    <button onClick = {this.handleAddItems}>Add Todo</button>
+                    <button onClick = {this.handleResetItems}>Reset</button>
                 </div>
             </div>
         )
