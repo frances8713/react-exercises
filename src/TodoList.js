@@ -21,7 +21,6 @@ export class TodoList extends React.Component {
         
         this.setState ({
             items : [...this.state.items, this.state.addItem],
-        lists-06
             addItem : ''
         })
     }
@@ -34,8 +33,14 @@ export class TodoList extends React.Component {
     }
 
     handleRemoveTodo = (event) => {   
-        event.target.parentElement.remove()
+        /* event.target.parentElement.remove() */
 
+        const removeButton = event.target.value
+        this.setState({items : this.state.items.filter((element, index) => removeButton != index) })
+    }
+
+    componentDidUpdate() {
+        console.log(this.state)
     }
 
     render () {
@@ -45,8 +50,8 @@ export class TodoList extends React.Component {
                 <h3>Todo List</h3>
                 <ul>
                     {this.state.items.map((item, index) => (
-                    <li key={index}>{item } 
-                        <button onClick = {this.handleRemoveTodo}>Remove</button> 
+                    <li key={index}>{item} 
+                        <button value={index} onClick = {this.handleRemoveTodo}>Remove</button> 
                     </li>))}
                 </ul>
                 <div>
