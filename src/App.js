@@ -1,11 +1,15 @@
 import React from "react";
-import { TodoList } from './TodoList';
 import { Welcome } from './Welcome'
+import { Container } from './Container'
 
 
 
 export class App extends React.Component {
     render() {
-        return <Welcome name={'Polly'}/>
+        return (
+          <Container>
+          <Welcome name={'Polly'}/>
+          </Container>
+        )
       }
 }
