@@ -36,7 +36,7 @@ export class Login extends React.Component {
         }
         return (
             <div>
-                <h2>Form</h2>
+                <h3>Login</h3>
                 <input name = 'username' value = {this.state.username} onChange={this.handleInputLoginChange}/>
                 <input name = 'password' type ='password' value = {this.state.password} onChange={this.handleInputLoginChange}/>
                 <input name = 'remember' type='checkbox' checked={this.state.remember} onChange={this.handleInputLoginChange}/>
