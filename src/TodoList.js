@@ -23,18 +23,37 @@ export class TodoList extends React.Component {
         })
     }
 
+    handleResetItems = () => {
+
+        this.setState ({
+            items: []
+        })
+    }
+
+    handleRemoveTodo = (event) => {   
+        /* event.target.parentElement.remove() */
+
+        const removeButton = event.target.value
+        this.setState({items : this.state.items.filter((element, index) => removeButton != index) })
+    }
+
+    componentDidUpdate() {
+        console.log(this.state)
+    }
+
 
     render () {
 
         return (
             <div>
                 <h3>Todo List</h3>
-                <ul>
-                    {this.state.items.map((item) => (<li>{item}</li>))}
-                </ul>
+                    <div>
+                        {this.props.render(this.state.items, this.handleRemoveTodo)}
+                    </div>
                 <div>
                     <input value = {this.state.addItem} onChange = {this.handleInput}></input>
-                    <button onClick = {this.handleAddItems}></button>
+                    <button onClick = {this.handleAddItems}>Add Todo</button>
+                    <button onClick = {this.handleResetItems}>Reset</button>
                 </div>
             </div>
         )
