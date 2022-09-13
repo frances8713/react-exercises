@@ -22,8 +22,8 @@ export class App extends React.Component {
         return (
           <div>
             <select value={this.state.language} onChange={this.handleLanguageChange}>
-              <option value="English">ENGLISH</option>
-              <option value="Italiano">ITALIANO</option>
+              <option value="en">ENGLISH</option>
+              <option value="it">ITALIANO</option>
             </select>
           <LanguageContext.Provider value={this.state.language}>  
           <Container title="My Application">
