@@ -23,5 +23,3 @@ export class DisplayLanguage extends React.Component {
         )
     }
 }
-
-//Forse in questo o nell'esercizio precedente ho interpretato male la consegna? ho sostituito solo p con h1
