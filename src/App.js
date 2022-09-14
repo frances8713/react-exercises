@@ -4,6 +4,7 @@ import { Container } from './Container'
 import { TodoList } from "./TodoList";
 import { LanguageContext } from "./LanguageContext";
 import { DisplayLanguage } from "./DisplayLanguage";
+import { Sum } from './Sum'
 
 
 
@@ -20,17 +21,11 @@ export class App extends React.Component {
 
     render() {
         return (
-          <div>
-            <select value={this.state.language} onChange={this.handleLanguageChange}>
-              <option value="English">ENGLISH</option>
-              <option value="Italiano">ITALIANO</option>
-            </select>
-          <LanguageContext.Provider value={this.state.language}>  
-          <Container title="My Application">
-          <DisplayLanguage />
+          <div> 
+          <Container title="My Application">         
           <Welcome name={'Polly'}/>
-          </Container> 
-          </LanguageContext.Provider>
+          <Sum />
+          </Container>        
           </div>
         )
       }
