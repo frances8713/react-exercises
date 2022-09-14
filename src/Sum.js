@@ -1,5 +1,5 @@
 
 
-export function Sum ({numbers = [3, 4, 6]}) {
+export function Sum ({numbers}) {
     return <h1>{numbers.reduce((a , b) => a + b)}</h1>
 }
