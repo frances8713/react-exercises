@@ -3,13 +3,6 @@ import { Age } from './Age'
 import { Login } from "./Login";
 
 
-export class Welcome extends React.Component {
-    render () {
-        return (
-        <div className="welcome">
-            <p>Welcome, {this.props.name}!</p>
-            <Login />
-        </div>
-        )
-    }
+export function Welcome(props) {
+    return <h3>Hello, {props.name}</h3>
 }
