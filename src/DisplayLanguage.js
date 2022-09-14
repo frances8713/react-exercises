@@ -16,10 +16,12 @@ export class DisplayLanguage extends React.Component {
             <div>
                 <LanguageContext.Consumer>
                    { language => {
-                    return <p>{stringa[language].stringa}</p>
+                    return <h1>{stringa[language].stringa}</h1>
                    } }
                 </LanguageContext.Consumer>
             </div>
         )
     }
 }
+
+//Forse in questo o nell'esercizio precedente ho interpretato male la consegna? ho sostituito solo p con h1
