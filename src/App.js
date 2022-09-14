@@ -24,7 +24,7 @@ export class App extends React.Component {
           <div> 
           <Container title="My Application">         
           <Welcome name={'Polly'}/>
-          <Sum />
+          <Sum numbers={[3, 5, 7]}/>
           </Container>        
           </div>
         )
