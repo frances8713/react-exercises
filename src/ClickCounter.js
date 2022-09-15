@@ -4,7 +4,6 @@ export function ClickCounter({initialValue = 0}) {
 
     const [count, setCount] = useState(initialValue)
 
-
     function handleIncrementValue () {
         setCount (e => e + 1)
     }

@@ -6,25 +6,17 @@ import { LanguageContext } from "./LanguageContext";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { Sum } from './Sum'
 import { ClickCounter } from "./ClickCounter";
+import { Login } from "./Login"
 
 
 
 export class App extends React.Component {
-    state = {
-      language: 'en'
-    }
-
-    handleLanguageChange = (event) => {
-       this.setState ({
-        language : event.target.value 
-       })
-    }
-
     render() {
         return (
           <div> 
           <Container title="My Application">         
           <Welcome name={'Polly'}/>
+          <Login />
           <ClickCounter />
           </Container>        
           </div>
