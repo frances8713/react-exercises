@@ -5,6 +5,7 @@ import { TodoList } from "./TodoList";
 import { LanguageContext } from "./LanguageContext";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { Sum } from './Sum'
+import { ClickCounter } from "./ClickCounter";
 
 
 
@@ -24,7 +25,7 @@ export class App extends React.Component {
           <div> 
           <Container title="My Application">         
           <Welcome name={'Polly'}/>
-          <Sum />
+          <ClickCounter />
           </Container>        
           </div>
         )
