@@ -4,6 +4,7 @@ import { Container } from './Container'
 import { ClickCounter } from "./ClickCounter";
 import { Counter } from './Counter'
 import { GithubUser } from "./GithubUser";
+import { GithubUserList } from "./GithubUserList";
 
 
 
@@ -12,9 +13,7 @@ export class App extends React.Component {
         return (
           <div> 
           <Container title="My Application">         
-          <Welcome name={'Polly'}/>
-          <GithubUser username="frances8713" />
-          <Counter />
+          <GithubUserList />
           </Container>        
           </div>
         )
