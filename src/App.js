@@ -1,7 +1,6 @@
 import React from "react";
 import { Container } from './Container'
-import { GithubUserList } from "./GithubUserList";
-import { Login } from "./Login"
+import { GithubUser } from './GithubUser'
 
 
 
@@ -10,8 +9,7 @@ export class App extends React.Component {
         return (
           <div> 
           <Container title="My Application">         
-          <GithubUserList />
-          <Login />
+          <GithubUser username="frances8713"/>
           </Container>        
           </div>
         )
