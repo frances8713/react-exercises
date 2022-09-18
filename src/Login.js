@@ -1,33 +1,15 @@
 
-import { useState } from 'react'
+import { useLogin } from "./useLogin"
 
 export function Login() {
-    const [data, setData] = useState ({
-        username: '',
-        password: '',
-        remember: false
-    })
-
-    const [disabled, setDisabled] = useState(true)
-
-    function handleInputChange (event) {
-        const {name, value, type, checked} = event.target
-
-        setData((data) => {
-            return {
-            ...data,
-            [name] : type === 'checkbox' ? checked : value
-            } 
-        })
-    }  
-
+    const {data, onHandleInputChange} = useLogin();
+    console.log(data)
     return ( 
         <form>
             <h3>Login</h3>
-            <input value={data.username} name='username' onChange={handleInputChange}/>
-            <input value={data.password} name='password' type='password' onChange={handleInputChange}/>
-            <input checked={data.remember} name='remember' type='checkbox' onChange={handleInputChange}/>  
-            <button type='submit' disabled={data.username === '' || data.password === '' ? true : false} onClick={() => setDisabled(true)}>Login</button>
+            <input value={data.username} name='username' onChange={onHandleInputChange}/>
+            <input value={data.password} name='password' type='password' onChange={onHandleInputChange}/>
+            <input checked={data.remember} name='remember' type='checkbox' onChange={onHandleInputChange}/>  
         </form>
     )  
 } 
@@ -36,15 +18,29 @@ export function Login() {
 
 
 
+// ------------------------------------------------------
+    // const [data, setData] = useState ({
+    //     username: '',
+    //     password: '',
+    //     remember: false
+    // })
 
+    // const [disabled, setDisabled] = useState(true)
 
+    // function handleInputChange (event) {
+    //     const {name, value, type, checked} = event.target
 
-
-
-
+    //     setData((data) => {
+    //         return {
+    //         ...data,
+    //         [name] : type === 'checkbox' ? checked : value
+    //         } 
+    //     })
+    // }  
 
 // import React from "react";
 
+// -----------------------------------------------
 
 // export class Login extends React.Component {
 //     state = {
