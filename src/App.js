@@ -3,18 +3,28 @@ import { useState } from "react"
 import { Container } from './Container'
 import { GithubUser } from './GithubUser'
 import { HookCounter } from './HookCounter'
+import { CarDetails } from './CarDetalis'
+import { LanguageContext } from "./LanguageContext";
+import { DisplayLanguage } from "./DisplayLanguage";
 
 
 export function App () {
-  const [username, setUserName] = useState('')
+ const [language, setLanguage] = useState('en')
 
+ function handleChangeLanguage(event) {
+     setLanguage(event.target.value)
+ }
         return (
           <div> 
+            <select value='language' onChange={handleChangeLanguage}>
+              <option value='en'>English</option>
+              <option value='it'>Italiano</option>
+            </select>
+          <LanguageContext.Provider value={language}>
           <Container title="My Application">  
-          <input value={username} onChange={(e) => setUserName(e.target.value)} />      
-          <GithubUser username="frances8713"/>
-          <HookCounter />
-          </Container>        
+          <DisplayLanguage />
+          </Container>  
+          </LanguageContext.Provider>      
           </div>
         )
       }
