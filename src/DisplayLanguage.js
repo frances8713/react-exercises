@@ -10,6 +10,7 @@ import { useContext} from "react"
             current_lang: "La tua scelta è: Italiano"
         }
     }
+    
     export function DisplayLanguage () {
 
         const language = useContext(LanguageContext)
