@@ -18,4 +18,6 @@ import { useContext} from "react"
             <h3>{strings[language]['current_lang']}</h3>
         )
 
-    }
+}
+
+
