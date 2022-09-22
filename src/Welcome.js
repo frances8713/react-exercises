@@ -1,8 +1,14 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+
 
 export function Welcome() {
     const {name = 'Dear'} = useParams()
 
-    return <h3>Hello, {name}!</h3>
+    return (
+        <div>
+            <h3>Hello, {name}!</h3>
+            <Link to='/counter'>Counter</Link>
+        </div>
+    )
 }

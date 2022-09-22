@@ -9,6 +9,7 @@ import { LanguageContext } from "./LanguageContext";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { FilteredList } from './FilteredList';
 import { Welcome } from './Welcome';
+import { Counter } from './Counter'
 
 export function App () {
 
@@ -18,6 +19,7 @@ export function App () {
           <Routes>
               <Route path="/" element={<Welcome />} />
               <Route path=":name" element={<Welcome/>}/>
+              <Route path="counter" element={<Counter/>} />
           </Routes>
           </Container>             
           </div>
