@@ -10,7 +10,7 @@ import { DisplayLanguage } from "./DisplayLanguage";
 import { FilteredList } from './FilteredList';
 import { Welcome } from './Welcome';
 import { Counter } from './Counter'
-
+import { ShowGithubUser} from './ShowGithubUser'
 export function App () {
 
         return (
@@ -20,6 +20,7 @@ export function App () {
               <Route path="/" element={<Welcome />} />
               <Route path=":name" element={<Welcome/>}/>
               <Route path="counter" element={<Counter/>} />
+              <Route path="users/:username" element={<ShowGithubUser/>}/>
           </Routes>
           </Container>             
           </div>
