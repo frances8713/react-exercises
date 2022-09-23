@@ -8,7 +8,6 @@ export function Welcome() {
     return (
         <div>
             <h3>Hello, {name}!</h3>
-            <Link to='/counter'>Counter</Link>
         </div>
     )
 }

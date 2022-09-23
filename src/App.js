@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Container } from './Container'
 import { GithubUser } from './GithubUser'
 import { HookCounter } from './HookCounter'
@@ -22,6 +23,11 @@ export function App () {
               <Route path="counter" element={<Counter/>} />
               <Route path="users/:username" element={<ShowGithubUser/>}/>
           </Routes>
+            <div className="link-one">
+              <Link to="/">Home</Link> 
+              <Link to="/Counter">Counter</Link>
+              <Link to="users/frances8713">Github User</Link>
+            </div>   
           </Container>             
           </div>
         )
