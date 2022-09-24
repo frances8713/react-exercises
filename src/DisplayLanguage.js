@@ -17,5 +17,5 @@ import { useContext} from "react"
         return (
             <h3>{strings[language]['current_lang']}</h3>
         )
-
     }
+
