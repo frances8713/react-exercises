@@ -23,6 +23,7 @@ export function App () {
               <Route path=":name" element={<Welcome/>}/>
               <Route path="counter" element={<Counter/>} />
               <Route path="/users" element={<GithubUserList />}>
+                  <Route index element={<p>Add a user and select it</p>}></Route>
                   <Route path=":username" element={<ShowGithubUser />}/>
               </Route>    
               <Route path="*" element={<div><p>Not found</p>
@@ -31,7 +32,7 @@ export function App () {
             <div className="link-one">
               <Link to="/">Home</Link> 
               <Link to="/Counter">Counter</Link>
-              <Link to="users/frances8713">Github User</Link>
+              <Link to="users/">Github User</Link>
             </div>   
           </Container>             
           </div>
