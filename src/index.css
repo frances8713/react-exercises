@@ -5,3 +5,9 @@
     padding: 10px;
 }
 
+
+.link-one {
+    display: flex;
+    gap: 5px;
+}
+

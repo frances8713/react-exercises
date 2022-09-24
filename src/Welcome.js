@@ -1,8 +1,13 @@
 import React from "react";
-import { Age } from './Age'
-import { Login } from "./Login";
+import { Link, useParams } from "react-router-dom";
 
 
-export function Welcome(props) {
-    return <h3>Hello, {props.name}</h3>
+export function Welcome() {
+    const {name = 'Dear'} = useParams()
+
+    return (
+        <div>
+            <h3>Hello, {name}!</h3>
+        </div>
+    )
 }

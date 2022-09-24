@@ -1,25 +1,21 @@
-import React from "react";
 import { LanguageContext } from "./LanguageContext";
+import { useContext} from "react"
 
-const stringa = {
-    en: {
-        stringa: "Your choice is: English"
-    },
-    it: {
-        stringa: "La tua scelta è: Italiano"
+ 
+    const strings = {
+        en: {
+            current_lang: "Your choice is: English"
+        },
+        it: {
+            current_lang: "La tua scelta è: Italiano"
+        }
     }
-}
+    export function DisplayLanguage () {
 
-export class DisplayLanguage extends React.Component {
-    render () {
+        const language = useContext(LanguageContext)
+
         return (
-            <div>
-                <LanguageContext.Consumer>
-                   { language => {
-                    return <h1>{stringa[language].stringa}</h1>
-                   } }
-                </LanguageContext.Consumer>
-            </div>
+            <h3>{strings[language]['current_lang']}</h3>
         )
     }
-}
+
