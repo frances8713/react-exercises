@@ -23,8 +23,9 @@ export function GithubUserList () {
                 <Link to="/users/gianmarcotoso">User due</Link>
                 </li>
             </ul>
-            {/* <input onChange={handleInputChange} />
-            <button type='submit' onClick={handleAddUser}>Add user</button> */}
+            <input name="username" onChange={handleInputChange} />
+            <button type='submit' onClick={handleAddUser}>Add user</button>
+            <Link to="/users"></Link>
             <Outlet />
         </div>
     )
